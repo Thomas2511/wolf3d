@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include		"wolf3D.h"
+#include		"wolf3d.h"
 
 int				ft_outside_map(t_cd ***matrix, float x, float y)
 {
