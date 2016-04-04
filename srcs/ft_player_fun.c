@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include				"wolf3D.h"
+#include				"wolf3d.h"
 
 t_player				*ft_place_player(t_cd ***matrix)
 {

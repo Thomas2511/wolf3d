@@ -30,7 +30,7 @@ MLXDIR	= $(ROOT)/minilibx_macos
 
 # compil flags
 CFLAGS	= -I $(INCDIR) -I $(LFTINC) -I $(MLXDIR) -Wall -Wextra -Werror
-LIBS = -L $(LIBDIR) -lft -lmlx -L minilibx_macos -framework OpenGL -framework AppKit
+LIBS	= -L $(LIBDIR) -lft -lmlx -L minilibx_macos -framework OpenGL -framework AppKit
 
 # source files
 SRC		= main.c \
