@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include		"wolf3d.h"
+#include "wolf3d.h"
 
 static int		ft_maxlen(t_mylist *save)
 {

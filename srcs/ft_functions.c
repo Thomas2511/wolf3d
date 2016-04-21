@@ -10,30 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include		"wolf3d.h"
-
-float			ft_rad(float rad)
-{
-	if (rad > 2 * M_PI)
-		return (ft_rad(rad - 2 * M_PI));
-	if (rad < 0)
-		return (ft_rad(2 * M_PI + rad));
-	return (rad);
-}
-
-float			ft_abs(float nb)
-{
-	if (nb < 0)
-		return (-nb);
-	return (nb);
-}
+#include "wolf3d.h"
 
 int				ft_size_of(char **split)
 {
 	int			i;
 
 	i = 0;
-	while (split[i])
+	while (split && split[i])
 		i++;
 	return (i);
 }
@@ -56,25 +40,30 @@ int				ft_save_size(t_mylist *save)
 	return (max_line);
 }
 
+t_mylist		*ft_listnext(char **content, size_t content_size)
+{
+	t_mylist	*list;
+
+	if ((list = (t_mylist *)malloc(sizeof(t_mylist))) == NULL)
+		return (NULL);
+	list->content = content;
+	list->content_size = content_size;
+	list->next = NULL;
+	return (list);
+}
+
 void			ft_lpbptr(t_mylist **alst, char **content, size_t content_size)
 {
 	t_mylist	*list;
 
 	list = NULL;
 	if (*alst == NULL)
-	{
-		list = (t_mylist*)malloc(sizeof(t_mylist));
-		list->content = content;
-		list->content_size = content_size;
-		*alst = list;
-	}
+		*alst = ft_listnext(content, content_size);
 	else
 	{
 		list = *alst;
 		while (list->next)
 			list = list->next;
-		list->next = (t_mylist*)malloc(sizeof(t_mylist));
-		list->next->content = content;
-		list->next->content_size = content_size;
+		list->next = ft_listnext(content, content_size);
 	}
 }

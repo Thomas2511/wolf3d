@@ -29,13 +29,14 @@ LFTINC	= $(LIBDIR)/includes
 MLXDIR	= $(ROOT)/minilibx_macos
 
 # compil flags
-CFLAGS	= -I $(INCDIR) -I $(LFTINC) -I $(MLXDIR) -Wall -Wextra -Werror
+CFLAGS	= -I $(INCDIR) -I $(LFTINC) -I $(MLXDIR) -Wall -Wextra -Werror -g
 LIBS	= -L $(LIBDIR) -lft -lmlx -L minilibx_macos -framework OpenGL -framework AppKit
 
 # source files
 SRC		= main.c \
 		  ft_create_matrix.c \
 		  get_next_line.c \
+		  maths.c \
 		  ft_functions.c \
 		  ft_img_fun.c \
 		  ft_player_fun.c \

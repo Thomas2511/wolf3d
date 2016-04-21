@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include			"wolf3d.h"
+#include "wolf3d.h"
 
 static void			draw_pixel(t_env *env, int x, float rad, t_cd ***matrix)
 {

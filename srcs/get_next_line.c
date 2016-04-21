@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include			"get_next_line.h"
-#include			"libft.h"
-#include			<stdlib.h>
-#include			<unistd.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "get_next_line.h"
+#include "libft.h"
 
 static int			split_buffer(char **buf, char **line)
 {

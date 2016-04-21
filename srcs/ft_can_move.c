@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include			"wolf3d.h"
+#include "wolf3d.h"
 
 int					ft_can_move(t_env *env, const float x, const float y)
 {

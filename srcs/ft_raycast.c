@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include		"wolf3d.h"
+#include "wolf3d.h"
 
 int				ft_outside_map(t_cd ***matrix, float x, float y)
 {
@@ -29,8 +29,8 @@ int				ft_outside_map(t_cd ***matrix, float x, float y)
 	return (1);
 }
 
-static float	ft_vertical_ray(t_cd ***matrix, t_player *player, float rad,
-								int	*offset_y)
+static float	ft_vertical_ray(t_cd ***matrix, t_player *player, float rad
+		, int *offset_y)
 {
 	float		x;
 	float		y;
